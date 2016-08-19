@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WunderPomoAPP", "WunderPomoAPP\WunderPomoAPP.csproj", "{980DB53F-2648-4BC0-B9D5-EB3C13398635}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Debug|ARM.ActiveCfg = Debug|ARM
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Debug|ARM.Build.0 = Debug|ARM
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Debug|ARM.Deploy.0 = Debug|ARM
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Debug|x64.ActiveCfg = Debug|x64
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Debug|x64.Build.0 = Debug|x64
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Debug|x64.Deploy.0 = Debug|x64
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Debug|x86.ActiveCfg = Debug|x86
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Debug|x86.Build.0 = Debug|x86
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Debug|x86.Deploy.0 = Debug|x86
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Release|ARM.ActiveCfg = Release|ARM
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Release|ARM.Build.0 = Release|ARM
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Release|ARM.Deploy.0 = Release|ARM
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Release|x64.ActiveCfg = Release|x64
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Release|x64.Build.0 = Release|x64
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Release|x64.Deploy.0 = Release|x64
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Release|x86.ActiveCfg = Release|x86
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Release|x86.Build.0 = Release|x86
+		{980DB53F-2648-4BC0-B9D5-EB3C13398635}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
