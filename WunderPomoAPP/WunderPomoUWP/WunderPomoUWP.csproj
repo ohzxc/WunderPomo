@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{980db53f-2648-4bc0-b9d5-eb3c13398635}</ProjectGuid>
+    <ProjectGuid>{b34f5987-831d-4ed9-8aaa-dd30f367d51b}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WunderPomoAPP</RootNamespace>
-    <AssemblyName>WunderPomoAPP</AssemblyName>
+    <RootNamespace>WunderPomoUWP</RootNamespace>
+    <AssemblyName>WunderPomoUWP</AssemblyName>
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
@@ -17,7 +17,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     
-    <PackageCertificateKeyFile>WunderPomoAPP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>WunderPomoUWP_TemporaryKey.pfx</PackageCertificateKeyFile>
     
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
@@ -107,7 +107,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     
-    <None Include="WunderPomoAPP_TemporaryKey.pfx" />
+    <None Include="WunderPomoUWP_TemporaryKey.pfx" />
     
   </ItemGroup>
   <ItemGroup>
