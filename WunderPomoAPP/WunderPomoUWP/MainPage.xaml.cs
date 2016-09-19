@@ -33,8 +33,7 @@ namespace WunderPomoUWP
             localTaskList.Add(new TaskViewModel { Task = new Model.BaseTask() { Title = "t3" } });
             datacontext.LocalTaskList = localTaskList;
             DataContext = datacontext;
-            this.InitializeComponent();
-            
+            this.InitializeComponent(); 
         }
     }
 }

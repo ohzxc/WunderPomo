@@ -1,0 +1,102 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="using:WunderPomoUWP.Controls"
+                    xmlns:converter="using:WunderPomoUWP.Converter"
+                    xmlns:local="using:WunderPomoUWP">
+    <converter:BooleanToVisibilityConverter x:Name="BooleanToVisibilityConverter" />
+    <Style TargetType="controls:Expander">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:Expander">
+                    <Grid x:Name="grid"
+                          Background="{TemplateBinding Background}"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="32" />
+                            </Grid.ColumnDefinitions>
+                            <ToggleButton x:Name="toggleButton"
+                                          Height="32"
+                                          MinWidth="32"
+                                          HorizontalAlignment="Stretch"
+                                          BorderThickness="0"
+                                          IsChecked="{Binding IsExpand,
+                                                              RelativeSource={RelativeSource Mode=TemplatedParent},
+                                                              Mode=TwoWay}">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                    <Path x:Name="arrow"
+                                          Width="16"
+                                          Height="16"
+                                          Data="M15.289001,0L20.484007,0 31.650999,15.953003 29.055021,19.658005 20.415007,32 15.35501,32 15.289001,31.906998 24.621,18.572998 0,18.572998 0,13.326004 24.621,13.326004z"
+                                          Fill="#DDFFFFFF"
+                                          RenderTransformOrigin="0.5,0.5"
+                                          Stretch="Uniform">
+                                        <Path.RenderTransform>
+                                            <RotateTransform x:Name="pathRotate" />
+                                        </Path.RenderTransform>
+                                    </Path>
+                                    <ContentPresenter VerticalAlignment="Center" Content="{TemplateBinding Header}" />
+                                </StackPanel>
+
+                            </ToggleButton>
+                            <Button Grid.Column="1"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    Content="+" />
+                        </Grid>
+                        <ContentPresenter Grid.Row="1"
+                                          HorizontalContentAlignment="Stretch"
+                                          VerticalContentAlignment="Stretch"
+                                          Content="{TemplateBinding Content}"
+                                          Visibility="{Binding IsExpand,
+                                                               RelativeSource={RelativeSource Mode=TemplatedParent},
+                                                               Converter={StaticResource BooleanToVisibilityConverter},
+                                                               Mode=TwoWay}" />
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition From="Normal"
+                                                      GeneratedDuration="0:0:0.2"
+                                                      To="Expanded" />
+                                    <VisualTransition From="Expanded"
+                                                      GeneratedDuration="0:0:0.2"
+                                                      To="Normal" />
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0"
+                                                         Storyboard.TargetName="pathRotate"
+                                                         Storyboard.TargetProperty="Angle"
+                                                         To="0">
+                                            <DoubleAnimation.EasingFunction>
+                                                <QuinticEase EasingMode="EaseOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Expanded">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0"
+                                                         Storyboard.TargetName="pathRotate"
+                                                         Storyboard.TargetProperty="Angle"
+                                                         To="90">
+                                            <DoubleAnimation.EasingFunction>
+                                                <QuinticEase EasingMode="EaseIn" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

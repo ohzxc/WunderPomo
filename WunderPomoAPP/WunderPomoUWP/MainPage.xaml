@@ -1,6 +1,7 @@
 ﻿<Page x:Class="WunderPomoUWP.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:Controls="using:WunderPomoUWP.Controls"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="using:WunderPomoUWP"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -8,9 +9,20 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
-            <ListBox x:Name="FavoriteListBox"  />
-            <ListBox x:Name="WunderListBox" />
-            <ListBox x:Name="LocalListBox" ItemsSource="{Binding LocalTaskList}" ItemTemplate="{StaticResource TaskItemDataTemplate}" />
+            <Controls:Expander Header="收藏">
+                <ListBox x:Name="FavoriteListBox" />
+            </Controls:Expander>
+            <Controls:Expander Header="奇妙清单">
+                <ListBox x:Name="WunderListBox" />
+            </Controls:Expander>
+
+            <Controls:Expander Header="本地任务">
+                <ListBox x:Name="LocalListBox"
+                         ItemTemplate="{StaticResource TaskItemDataTemplate}"
+                         ItemsSource="{Binding LocalTaskList}" />
+            </Controls:Expander>
+
+
 
         </StackPanel>
     </Grid>
