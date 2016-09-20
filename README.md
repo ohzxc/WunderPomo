@@ -1,4 +1,4 @@
-# WunderPomo
+# WunderPomo 奇妙番茄钟
 
 [![Join the chat at https://gitter.im/wunderpomo/Lobby](https://badges.gitter.im/wunderpomo/Lobby.svg)](https://gitter.im/wunderpomo/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
